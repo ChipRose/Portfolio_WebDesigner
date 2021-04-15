@@ -831,6 +831,12 @@ label {
 }
 
 @media (max-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+  p {
+    font-size: 20px;
+  }
   .cover__name {
     max-width: 100%;
     height: 50px;
@@ -861,6 +867,19 @@ label {
   .contacts__row {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .experience__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .experience__date {
+    text-align: center;
+  }
+  .experience__description {
+    font-size: 15px;
   }
 }
 
