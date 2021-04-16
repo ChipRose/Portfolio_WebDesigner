@@ -26,30 +26,31 @@ $('.spoiler__title').click(function (event) {
 //при загрузке
 let id = $("#nav-radio input:checked").val();
 $('.block-portfolio > div').hide();
-$('.block-portfolio > #'+id+'').show();
+$('.block-portfolio > #' + id + '').show();
 $('label.text1').addClass('activelabel');
 
 //при изменении
-$("#nav-radio").on("change", "input[type=radio]", function(){
-  
-  let id = $(this).val();
-  $('.block-portfolio > div').hide();
-  $('.block-portfolio > #'+id+'').show(); 
-  if (id=='cardview'){
-	$('label.text1').addClass('activelabel');
-	$('label.text2').removeClass('activelabel');
-}
-else{
-	$('label.text2').addClass('activelabel');
-	$('label.text1').removeClass('activelabel');
-}
+$("#nav-radio").on("change", "input[type=radio]", function () {
+
+	let id = $(this).val();
+	$('.block-portfolio > div').hide();
+	$('.block-portfolio > #' + id + '').show();
+	if (id == 'cardview') {
+		$('label.text1').addClass('activelabel');
+		$('label.text2').removeClass('activelabel');
+	}
+	else {
+		$('label.text2').addClass('activelabel');
+		$('label.text1').removeClass('activelabel');
+	}
 });
 //================ФОТОГАЛЕРЕЯ===================
-    lightbox.option({
-      'resizeDuration': 300,
-      'wrapAround': true,
-		albumLabel:	"Открытка %1 of %2",
-    })
+lightbox.option({
+	'resizeDuration': 300,
+	'wrapAround': true,
+	albumLabel: "Открытка %1 of %2",
+	disableScrolling: true,
+});
 
 
 
