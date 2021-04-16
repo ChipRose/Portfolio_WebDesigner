@@ -783,11 +783,11 @@ a {
   margin: 66px 0 0 0;
 }
 
-.spoiler {
-  margin: 0 20px 0 20px;
+.spoilerin {
+  cursor: pointer;
 }
 
-.spoiler__title {
+.spoilerin span {
   font-size: 23px;
   text-transform: uppercase;
   color: #88c99d;
@@ -795,13 +795,17 @@ a {
   margin: 0 20px 0 20px;
 }
 
-.spoiler__title:before, .spoiler__title:after {
+.spoilerin span:before, .spoilerin span:after {
   content: "";
   width: 10px;
   height: 2px;
   background: #377cc2;
   -webkit-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
+}
+
+.spoilerin span:hover {
+  color: #377cc2;
 }
 
 .experience {
@@ -861,33 +865,33 @@ a {
   left: 0;
 }
 
-.spoiler__title {
+.spoilerin span {
   position: relative;
 }
 
-.spoiler__title:before, .spoiler__title:after {
+.spoilerin span:before, .spoilerin span:after {
   position: absolute;
   top: 50%;
 }
 
-.spoiler__title:before {
+.spoilerin span:before {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   left: 0;
 }
 
-.spoiler__title:after {
+.spoilerin span:after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   left: 7px;
 }
 
-.spoiler__title.active:before {
+.spoilerin span.active:before {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
-.spoiler__title.active:after {
+.spoilerin span.active:after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
