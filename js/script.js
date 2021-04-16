@@ -16,10 +16,11 @@ $("nav li a").click(function () {
 
 //===================СПОЙЛЕРЫ===================
 if ($('.spoiler').hasClass('one')) {
-	$('.spoiler__title').removeClass('active');
+	$('.spoilerin').removeClass('active');
 	$('.experience').slideUp(300);
 }
-$('.spoiler__title').click(function (event) {
+$('.spoilerin').click(function (event) {
+	$('.spoiler__title').toggleClass('active');
 	$(this).toggleClass('active').next().slideToggle(300);
 });
 //===========ВЫБОР ЧАСТИ ПОРТФОЛИО===============
