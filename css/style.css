@@ -792,6 +792,7 @@ a {
   text-transform: uppercase;
   color: #88c99d;
   padding: 0 0 0 30px;
+  margin: 0 20px 0 20px;
 }
 
 .spoiler__title:before, .spoiler__title:after {
