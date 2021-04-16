@@ -16,10 +16,10 @@ $("nav li a").click(function () {
 
 //===================СПОЙЛЕРЫ===================
 if ($('.spoiler').hasClass('one')) {
-	$('.button').removeClass('active');
+	$('.spoiler__title').removeClass('active');
 	$('.experience').slideUp(300);
 }
-$('.button').click(function (event) {
+$('.spoiler__title').click(function (event) {
 	$(this).toggleClass('active').next().slideToggle(300);
 });
 //===========ВЫБОР ЧАСТИ ПОРТФОЛИО===============
@@ -44,6 +44,13 @@ else{
 	$('label.text1').removeClass('activelabel');
 }
 });
+//================ФОТОГАЛЕРЕЯ===================
+    lightbox.option({
+      'resizeDuration': 300,
+      'wrapAround': true,
+		albumLabel:	"Открытка %1 of %2",
+    })
+
 
 
 
