@@ -193,6 +193,7 @@ body.lock {
   background: #eec56c;
   border-radius: 8px;
   padding: 15px 0 15px 0;
+  margin: 2px 0 0 2px;
 }
 
 .burger__item {
@@ -267,8 +268,6 @@ body.lock {
 .burger__button {
   position: fixed;
   z-index: 20;
-  top: 2px;
-  left: 2px;
 }
 
 .burger__item {
@@ -767,7 +766,7 @@ a {
 }
 
 .rezume {
-  background: url("../img/rezume/pen.png") 95% 100% no-repeat;
+  background: url("../img/rezume/pen.png") 90% 100% no-repeat;
 }
 
 .rezume__item {
@@ -917,7 +916,7 @@ label {
   margin: 20px 0 20px 0;
 }
 
-.portfolio__row {
+#cardview .portfolio__row {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(100px, 360px))[auto-fit];
@@ -930,7 +929,21 @@ label {
           justify-content: center;
 }
 
-.portfolio__image {
+#siteview .portfolio__row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#siteview .portfolio__image,
+#cardview .portfolio__image {
   display: block;
   background: white;
   -webkit-box-shadow: 0px 0px 10px rgba(55, 124, 194, 0.2);
@@ -938,7 +951,8 @@ label {
   padding: 20px 20px 20px 20px;
 }
 
-.portfolio__image:before {
+#siteview .portfolio__image:before,
+#cardview .portfolio__image:before {
   content: "";
   width: 100%;
   height: 100%;
@@ -947,11 +961,13 @@ label {
   background: url("../img/icon/eye-icon.png") center/25% no-repeat;
 }
 
-.portfolio__image:hover:before {
+#siteview .portfolio__image:hover:before,
+#cardview .portfolio__image:hover:before {
   visibility: visible;
 }
 
-.portfolio__image img {
+#siteview .portfolio__image img,
+#cardview .portfolio__image img {
   display: block;
   width: 100%;
 }
@@ -1079,19 +1095,32 @@ label {
   .experience__description {
     font-size: 15px;
   }
-  .portfolio__row {
+  #cardview .portfolio__row {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     -webkit-column-gap: 10px;
             column-gap: 10px;
     row-gap: 10px;
   }
-  .portfolio__image {
+  #cardview .portfolio__image {
+    padding: 10px 10px 10px 10px;
+  }
+  #siteview .portfolio__row {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+    row-gap: 10px;
+  }
+  #siteview .portfolio__image {
     padding: 10px 10px 10px 10px;
   }
 }
 
 @media (max-width: 415px) {
+  .rezume {
+    background: url("../img/rezume/pen.png") 50% 100%/100% no-repeat;
+  }
   .title {
     font-size: 40px;
   }
